@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-5_h6n#(5k@l(f6
 DEBUG = os.environ.get('DEBUG', 'True') == 'True'  # Default to True for development
 
 # ALLOWED_HOSTS - Add your PythonAnywhere domain when deploying
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 INSTALLED_APPS = [
@@ -132,7 +132,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']  # Look for static files here during development
-STATIC_ROOT = BASE_DIR / 'staticfiles'  # For production - where collectstatic puts files
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # For production - where collectstatic puts files
 
 # Media files (if you have user uploads)
 MEDIA_URL = '/media/'
