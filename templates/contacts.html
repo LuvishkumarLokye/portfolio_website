@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luvish's Portfolio</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+</head>
+<body>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/projects.html">Projects</a></li>
+            <li><a href="/contacts.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <section class="text-section" id="section1">
+            <h2 class="section-title">My contacts</h2>
+            <p class="middletex">In case you need my contact information here it is.</p>
+
+            <div class="contact-row">
+                <a class="github-contact" href="https://github.com/LuvishkumarLokye">Github</a>
+                <a class="email-contact" href="mailto:luvishlokye07@gmail.com">Email</a>
+            </div>
+
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+
+            <div class="contact-form">
+                <form method="post" action="{% url 'contacts' %}" onsubmit="return validateForm()">
+                    {% csrf_token %}
+
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" value="{{ form_data.name|default:'' }}" required>
+                    <div id="nameError" class="error-message">Please enter your name</div>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your email" value="{{ form_data.email|default:'' }}" required>
+                    <div id="emailError" class="error-message">Please enter a valid email</div>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" placeholder="Your message" rows="5" required>{{ form_data.message|default:'' }}</textarea>
+                    <div id="messageError" class="error-message">Please enter your message</div>
+
+                    <input type="submit" value="Send Message" class="submit-btn">
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="main-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <p class="footer-above">Built and Designed by Luvish Lokye</p>
+                <p class="footer-below">All right reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

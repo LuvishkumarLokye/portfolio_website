@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luvish's Portfolio</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+</head>
+<body>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/projects.html">Projects</a></li>
+            <li><a href="/contacts.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+
+        
+        <section class="text-section" id="section1">
+            <h2 class="section-title"> 
+                Projects.
+            </h2>
+
+            <h3 class="subsection-title">
+                Here are my projects.
+            </h3>
+
+
+            <div class="project-containers">
+                <div class="text-box">
+                    <h2>project title</h2>
+                    <p>to be elaborated</p>
+
+                </div>
+            
+            </div>
+
+
+        </section>
+
+        
+    </main>
+
+            <footer class="site-footer" id="main-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <p class="footer-above">
+                    Built and Designed by Luvish Lokye
+                </p>
+                <p class="footer-below">
+                    All right reserved.©
+                </p>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>

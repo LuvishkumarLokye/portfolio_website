@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luvish's Portfolio</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+</head>
+<body>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/projects.html">Projects</a></li>
+            <li><a href="/contacts.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+      <section class="text-section" id="section1">
+          <h2 class="section-title"> 
+                Here are more details about me.
+            </h2>
+
+            <h3 class="subsection-title-about">
+                Computer Science Student
+            </h3>
+
+            <p class="regular-text">I'm currently at University Of Mauritius and I'm pursuing a degree in Computer Science, where I've developed a strong foundation in programming, algorithms, and software development. My journey in tech began with curiosity about how things work, and has evolved into a passion for creating elegant solutions to complex problems.</p>
+            <p class="middletex">Throughout my academic journey, I've worked on various projects ranging from web applications to data analysis tools. I believe in continuous learning and staying updated with the latest technologies and best practices in the industry.</p>
+            <p class="bottom-text">My goal is to leverage my skills and knowledge to contribute to innovative projects and make a positive impact in the tech industry. I'm particularly interested in web development, software engineering, and exploring the intersections of technology with other fields.</p>
+
+
+         <!-- Skills table -->   
+          <table class="skills-table">
+            <thread>
+                <tr>
+                    <th>Technologies & Skills</th>
+                </tr>
+            </thread>
+
+
+            <tbody>
+                <tr>
+                    <td>Python</td>
+                </tr>
+                
+            </tbody>
+
+                        <tbody>
+                <tr>
+                    <td>Html</td>
+                </tr>
+                
+            </tbody>
+
+                        <tbody>
+                <tr>
+                    <td>CSS</td>
+                </tr>
+                
+            </tbody>
+
+                        <tbody>
+                <tr>
+                    <td>Django</td>
+                </tr>
+                
+            </tbody>
+          </table>
+    </main>
+
+        <footer class="site-footer" id="main-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <p class="footer-above">
+                    Built and Designed by Luvish Lokye
+                </p>
+                <p class="footer-below">
+                    All right reserved.©
+                </p>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
